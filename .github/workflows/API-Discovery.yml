@@ -2,6 +2,8 @@ name: Send Discovered API to ApiConnect
 
 on: [pull_request, workflow_dispatch, push]
 
+
+
 env:
   API_HOST: apps.surajocp.cp.fyre.ibm.com
   # platform_api_prefix is not required to change for ApiConnect on Cloud
@@ -13,7 +15,8 @@ env:
 
 jobs:
   run-discovery:
-    runs-on: ubuntu-latest
+    #runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
     - uses: actions/checkout@v4
     - name: Difference
